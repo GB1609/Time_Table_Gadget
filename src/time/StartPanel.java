@@ -32,7 +32,7 @@ public class StartPanel extends JPanel
 			e.printStackTrace();
 		}
 		this.close=new ModifiedButton(close1,close2,frame,e -> System.exit(0));
-		this.close.setBounds(((timeTable.getWidth(null)/2)-(close1.getIconWidth()/2)),455,close1.getIconWidth(),close1.getIconHeight());
+		this.close.setBounds(((timeTable.getWidth(null)/2)-(close1.getIconWidth()/2)),465,close1.getIconWidth(),close1.getIconHeight());
 		this.addMouseListener(new MouseAdapter()
 		{
 			@Override

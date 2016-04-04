@@ -5,6 +5,10 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 public class MainFrame extends JFrame
 {
+	public static void main(String[] args)
+	{
+		new MainFrame();
+	}
 	private static final long serialVersionUID=1L;
 	private Dimension screenSize;
 	private StartPanel startPanel;
@@ -14,8 +18,8 @@ public class MainFrame extends JFrame
 		this.screenSize=Toolkit.getDefaultToolkit().getScreenSize();
 		this.setSize(372,134);
 		this.setUndecorated(true);
-		this.setBackground(Color.BLACK);
-		this.setTitle("Sliding Block");
+		this.setBackground(new Color(0,0,0,0));
+		this.setTitle("Time_Table_Gadget");
 		this.setDefaultCloseOperation(0);
 		this.startPanel=new StartPanel(this);
 		this.setContentPane(startPanel);
@@ -27,9 +31,7 @@ public class MainFrame extends JFrame
 	{
 		super.setSize(width,height);
 		if (width==1240)
-		{
 			this.setLocationRelativeTo(null);
-		}
 		else
 		{
 			this.setLocation((int) (screenSize.getWidth()-(this.getWidth()+20)),20);
